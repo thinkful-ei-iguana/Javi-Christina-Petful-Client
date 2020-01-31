@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Context } from '../context';
-import faker from 'faker';
+import '../App.css'
+//import faker from 'faker';
 
 export default class CatsAndDogs extends Component{
     state = {
@@ -8,34 +9,20 @@ export default class CatsAndDogs extends Component{
         dogIdx: 0,
         catLength: (this.context.catsQ!==null)?this.context.catsQ.length:1,
         dogLength: (this.context.dogsQ!==null)?this.context.dogsQ.length:1,
-        usersQ: [
-            {
-              name: 'Eli'
-            },
-            {
-              name: 'Maggie'
-            },
-            {
-              name: 'Sophia'
-            },
-            // {
-            //   name: 'Shelby'
-            // },
-            // {
-            //   name: 'Javier'
-            // },
-            // {
-            //   name: 'Cyra'
-            // },
-            // {
-            //     name: 'Michael'
-            // },
-            // {
-            //     name: 'Ahverie'
-            // }
+        usersQ: [{ name: 'Eli'},{name: 'Maggie'},{name: 'You'},{name: 'Shelby'},{name: 'Javier'},{name: 'You'},
+                 { name: 'Eli'},{name: 'Maggie'},{name: 'You'},{name: 'Shelby'},{name: 'Javier'},{name: 'You'},
+                 { name: 'Eli'},{name: 'Maggie'},{name: 'You'},{name: 'Shelby'},{name: 'Javier'},{name: 'You'},
+                 { name: 'Eli'},{name: 'Maggie'},{name: 'You'},{name: 'Shelby'},{name: 'Javier'},{name: 'You'},
+                 { name: 'Eli'},{name: 'Maggie'},{name: 'You'},{name: 'Shelby'},{name: 'Javier'},{name: 'You'},
+                 { name: 'Eli'},{name: 'Maggie'},{name: 'You'},{name: 'Shelby'},{name: 'Javier'},{name: 'You'},
+                 { name: 'Eli'},{name: 'Maggie'},{name: 'You'},{name: 'Shelby'},{name: 'Javier'},{name: 'You'},
+                 { name: 'Eli'},{name: 'Maggie'},{name: 'You'},{name: 'Shelby'},{name: 'Javier'},{name: 'You'},
           ],
+
       adoptedDogs: [],
-      adoptedCats: []
+      adoptedCats: [],
+      count: 0,
+      users: ''
     }
     static contextType = Context;
 
@@ -43,7 +30,7 @@ export default class CatsAndDogs extends Component{
       setInterval(() => {
         this.userPosition();
         this.newUser();
-      }, 10000);
+      }, 3000);
     }
     handleCatClick(){
       this.setState({
@@ -60,9 +47,10 @@ export default class CatsAndDogs extends Component{
     }
 
     newUser() {
-      let fakeName = faker.name.firstName();
+      //let fakeName = faker.name.firstName();
+      
       this.setState({
-        usersQ: [ ...this.state.usersQ, { name: fakeName }]
+        usersQ: [ ...this.state.usersQ]//, { name: fakeName }]
       })
     }
 
@@ -236,6 +224,7 @@ export default class CatsAndDogs extends Component{
             let adoptedDogs =<div>{this.renderAdoptedDogs()}</div>
             return(
                 <>
+                
                 <h3>People in line: {users}</h3>
                 <div className='Cat'>
                     {cat}
