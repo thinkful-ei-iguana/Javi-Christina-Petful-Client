@@ -18,21 +18,21 @@ export default class CatsAndDogs extends Component{
             {
               name: 'Sophia'
             },
-            {
-              name: 'Shelby'
-            },
-            {
-              name: 'Javier'
-            },
-            {
-              name: 'Cyra'
-            },
-            {
-                name: 'Michael'
-            },
-            {
-                name: 'Ahverie'
-            }
+            // {
+            //   name: 'Shelby'
+            // },
+            // {
+            //   name: 'Javier'
+            // },
+            // {
+            //   name: 'Cyra'
+            // },
+            // {
+            //     name: 'Michael'
+            // },
+            // {
+            //     name: 'Ahverie'
+            // }
           ],
       adoptedDogs: [],
       adoptedCats: []
