@@ -22,7 +22,7 @@ export class ContextProvider extends React.Component {
       }
 
       fetchCats=()=>{
-          fetch(`${config.REACT_APP_API_BASE}/cats`, {
+          fetch(`${config.RREACT_APP_API_BASE}/cats`, {
             method: 'GET'
           })
             .then(res => res.json())
