@@ -22,7 +22,7 @@ export class ContextProvider extends React.Component {
       }
 
       fetchCats=()=>{
-          fetch(`${config.API_ENDPOINT}/cats`, {
+          fetch(`${config.REACT_APP_API_BASE}/cats`, {
             method: 'GET'
           })
             .then(res => res.json())
@@ -34,7 +34,7 @@ export class ContextProvider extends React.Component {
             
         }
       fetchDogs=()=>{
-          fetch(`${config.API_ENDPOINT}/dogs`, {
+          fetch(`${config.REACT_APP_API_BASE}/dogs`, {
             method: 'GET'
           })
             .then(res => res.json())
@@ -47,7 +47,7 @@ export class ContextProvider extends React.Component {
         }
       
       adoptDog=()=>{
-        fetch(`${config.API_ENDPOINT}/dogs`,{
+        fetch(`${config.REACT_APP_API_BASE}/dogs`,{
           method: 'DELETE'
         })
         .then( () => {
@@ -58,7 +58,7 @@ export class ContextProvider extends React.Component {
         })
       }
       adoptCat=()=>{
-        fetch(`${config.API_ENDPOINT}/cats`,{
+        fetch(`${config.REACT_APP_API_BASE}/cats`,{
           method: 'DELETE'
         })
         .then( () => {

@@ -1,4 +1,4 @@
 export default {
-    API_ENDPOINT: `https://shrouded-anchorage-72118.herokuapp.com/api`
+  REACT_APP_API_BASE: process.env.REACT_APP_API_BASE || "https://peaceful-plains-00984.herokuapp.com/api"
     // API_ENDPOINT: 'http://localhost:8000/api'
   }
