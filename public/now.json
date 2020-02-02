@@ -1,8 +1,10 @@
 {
     "version": 2,
-    "name": "javi_chris",
+    "name": "javi-chris",
     "alias": "catdo",
     "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/index.html" },
       {
         "src": "^/static/(.*)",
         "dest": "/static/$1"
